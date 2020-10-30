@@ -35,7 +35,6 @@ $content = $connection->get("search/tweets",
 //配列からIDを取得しリツイート
   foreach($id_list as $key){
     $retweets = $connection->post("statuses/retweet/$key");
-    // var_dump($retweets);
   }
 
 
