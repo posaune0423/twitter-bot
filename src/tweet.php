@@ -4,7 +4,6 @@
 class TweetManager
 {
 	public $oauth_instance;
-	public $retweeted_list;
 
 	public function __construct($oauth_instance)
 	{
@@ -30,7 +29,8 @@ class TweetManager
 
 	/**
 	 *
-	 * fetch tweets containg given keywords and return id_lists
+	 * fetch tweets which has not retweeted yet containg given keywords and return id_lists
+	 *
 	 *
 	 * @param stdClass $tweets
 	 * @param array $keyword
@@ -41,6 +41,11 @@ class TweetManager
 		$id_lists = [];
 
 		foreach ($tweets as $tweet) {
+			if ($tweet->retweeted) {
+				// if the tweet has already been retweeted
+				continue;
+			}
+
 			foreach ($keywords as $keyword) {
 				if (strpos($tweet->text, $keyword) !== false) {
 					// if tweet contains any keyword
@@ -64,11 +69,6 @@ class TweetManager
 	{
 		$count = 0;
 		foreach ($tweet_ids as $tweet_id) {
-			if (isset($this->retweeted_list[$tweet_id])) {
-				// if the tweet is already retweeted
-				continue;
-			}
-
 			$result = $this->oauth_instance->post("statuses/retweet/$tweet_id");
 
 			if (!empty($result->errors)) {
@@ -77,8 +77,6 @@ class TweetManager
 				}
 			}
 
-			// set rewteeted tweet to mamber variables
-			$this->retweeted_list[$tweet_id] = true;
 			$count++;
 		}
 
