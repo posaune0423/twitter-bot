@@ -75,7 +75,6 @@ class TweetManager
 		return $result;
 	}
 
-
 	/**
 	 *
 	 * retweet multiple tweets by given tweet_ids if the tweet has not been retweeted yet.
@@ -99,5 +98,10 @@ class TweetManager
 		}
 
 		return $count;
+	}
+
+	public function extract_error_message($response_body)
+	{
+		return $response_body->errors[0]->message;
 	}
 }
