@@ -1,7 +1,7 @@
 <?php
 
 require_once('../config.php');
-require_once('./tweet.php');
+require_once('./tweetmanager.php');
 require '../vendor/autoload.php';
 
 
