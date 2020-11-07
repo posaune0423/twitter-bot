@@ -69,7 +69,9 @@ class TweetManager
 	{
 		$result = $this->oauth_instance->post(
 			"statuses/update",
-			array("status" => $content)
+			array(
+				"status" => $content
+			)
 		);
 
 		return $result;
