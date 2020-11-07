@@ -60,6 +60,24 @@ class TweetManager
 
 	/**
 	 *
+	 * tweet the given content
+	 *
+	 * @param string $content
+	 * @return
+	 */
+	public function tweet($content)
+	{
+		$result = $this->oauth_instance->post(
+			"statuses/update",
+			array("status" => $content)
+		);
+
+		return $result;
+	}
+
+
+	/**
+	 *
 	 * retweet multiple tweets by given tweet_ids if the tweet has not been retweeted yet.
 	 * and return the number of retweeted tweets at the time.
 	 * @param array $tweet_ids
