@@ -1,8 +1,4 @@
 <?php
-ini_set('session.gc_maxlifetime', 60 * 60 * 24);
-session_start();
-$_SESSION['retweeted'] = [];
-
 
 require_once('../config.php');
 require_once('./tweet.php');
