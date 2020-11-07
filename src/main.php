@@ -21,7 +21,7 @@ $keywords = ['リツイート', 'RT'];
 
 
 $current_timeline = $tweetmanager->get_timeline();
-$id_lists = $tweetmanager->fetch_tweet_id_containg_keywords($current_timeline, $keywords);
+$id_lists = $tweetmanager->fetch_tweet_id_containing_keywords($current_timeline, $keywords);
 
 
 $result = $tweetmanager->retweet($id_lists);

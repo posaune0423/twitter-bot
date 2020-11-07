@@ -36,7 +36,7 @@ class TweetManager
 	 * @param array $keyword
 	 * @return array
 	 */
-	public function fetch_tweet_id_containg_keywords($tweets, $keywords)
+	public function fetch_tweet_id_containing_keywords($tweets, $keywords)
 	{
 		$id_lists = [];
 
