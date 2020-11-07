@@ -69,7 +69,9 @@ $ git push heroku master
 
 ```
 $ heroku run php src/test.php
-result here
+$ heroku run php src/test.php                                                                              [master]
+Running php src/test.php on ⬢ shielded-cove-80623... up, run.2427 (Free)
+It Works !
 ```
 
 6. Add the [Scheduler Add-on](https://devcenter.heroku.com/articles/scheduler)
