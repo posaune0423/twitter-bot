@@ -44,6 +44,13 @@ define('ACCESS_TOKEN', 'your access token');
 define('ACCESS_TOKEN_SECRET', 'your secret access token');
 ```
 please replace `your ~` statement to your actual API access token respectively.
+and commit changes you made now
+
+```
+$ git add config.php
+
+$ git commit -m "set API Key"
+```
 
 
 2. Then, login to heroku, and create heroku app.
