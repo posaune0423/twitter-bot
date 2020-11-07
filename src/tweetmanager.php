@@ -87,13 +87,13 @@ class TweetManager
 	public function retweet($tweet_ids)
 	{
 		$count = 0;
+
 		foreach ($tweet_ids as $tweet_id) {
 			$result = $this->oauth_instance->post("statuses/retweet/$tweet_id");
 
 			if (!empty($result->errors)) {
-				foreach ($result->errors as $error) {
-					echo $error->message . "\n";
-				}
+				echo $this->extract_error_message($result) . "\n";
+				continue;
 			}
 
 			$count++;
