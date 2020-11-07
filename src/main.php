@@ -7,22 +7,20 @@ require '../vendor/autoload.php';
 
 use Abraham\TwitterOAuth\TwitterOAuth;
 
-//必要なキーを読み込む
+// set required api key
 $connection = new TwitterOAuth(
 	CONSUMER_KEY,
 	CONSUMER_SECRET,
 	ACCESS_TOKEN,
 	ACCESS_TOKEN_SECRET
 );
-
-
-
 $tweetmanager = new TweetManager($connection);
+
+
 $keywords = ['リツイート', 'RT'];
 
 
-
-$current_timeline = $tweetmanager->get_timeline(10);
+$current_timeline = $tweetmanager->get_timeline();
 $id_lists = $tweetmanager->fetch_tweet_id_containg_keywords($current_timeline, $keywords);
 
 
