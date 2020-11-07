@@ -1,8 +1,8 @@
 <?php
 
-require_once('../config.php');
-require_once('./tweetmanager.php');
-require '../vendor/autoload.php';
+require(dirname(__FILE__) . '/../vendor/autoload.php');
+require_once(dirname(__FILE__) . '/../config.php');
+require_once(dirname(__FILE__) . '/tweetmanager.php');
 
 
 use Abraham\TwitterOAuth\TwitterOAuth;
@@ -31,4 +31,5 @@ if ($connection->getLastHttpCode() === 200) {
 	echo 'Success! ' . $result . ' tweets has been retweeted' . "\n";
 } else {
 	echo 'Something went Wrong...' . "\n";
+	echo $tweetmanager->extract_error_message($connection->getLastBody());
 }
