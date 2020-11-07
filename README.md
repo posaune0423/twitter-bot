@@ -75,7 +75,7 @@ $ git push heroku master
 5. Test the script by running it in a one-off worker dyno just to see it work before scheduling it
 
 ```
-$ heroku run php src/test.php                                                                              [master]
+$ heroku run php src/test.php
 Running php src/test.php on ⬢ shielded-cove-80623... up, run.2427 (Free)
 It Works !
 ```
