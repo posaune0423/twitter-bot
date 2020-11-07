@@ -1,6 +1,76 @@
 # twitter-bot
-This is the twitter bot which can search prize tweets and retweet them automatically.
 
-Ths was developed by PHP and also which used TwitterOAuth library.
+This is simple php script which allows you to search tweets containing given keywords like "RT", "follow & retweet" so that you can get a kind of prize 💵
 
-https://github.com/abraham/twitteroauth
+In my repository, I use the very useful php library [abraham/twitteroauth](https://github.com/abraham/twitteroauth) developed by [him](https://github.com/abraham).
+
+# Prerequisites
+
+This script works on [Heroku](https://dashboard.heroku.com/).
+So, if you don't have Heroku Account yet, please signup [here](https://signup.heroku.com/login)
+
+Also It is necessary to install Heroku CLI into your terminal.
+if you haven't installed it yet, please run this command below.
+
+```
+$ brew tap heroku/brew && brew install heroku
+```
+
+
+
+
+# Installation & Getting started
+
+
+1. First, you need to clone this repository to anywhere you want.
+```
+$ git clone https://github.com/posaune0423/twitter-bot.git
+
+$ cd twitter-bot
+```
+
+2. Then, login to heroku, and create heroku app.
+```
+$ heroku login
+
+$ heroku create [your app name or blank]
+```
+
+3. Add your git local repository to heroku remote repositry.
+```
+$ git remote add heroku https://git.heroku.com/{yourapp name}.git
+
+$ git remote -v
+```
+
+4. then push this repository to your heroku app created right now
+```
+$ git push heroku master
+```
+
+5. Test the script by running it in a one-off worker dyno just to see it work before scheduling it
+
+```
+$ heroku run php src/test.php
+result here
+```
+
+6. Add the [Scheduler Add-on](https://devcenter.heroku.com/articles/scheduler)
+
+```
+$ heroku addons:add scheduler:standard
+```
+
+7. Open the scheduler configuration page
+```
+$ heroku addons:open scheduler
+```
+
+8. Add the script as a job. Same as one-off step above, but without the `heroku run` - Add job... - `$ php src/test.php`
+
+9. View the scheduled job running in the logs
+
+```
+$ heroku logs
+
+```
