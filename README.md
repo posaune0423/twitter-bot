@@ -4,7 +4,7 @@ This is simple php script which allows you to search tweets containing given key
 
 In my repository, I use the very useful php library [abraham/twitteroauth](https://github.com/abraham/twitteroauth) developed by [him](https://github.com/abraham).
 
-# Prerequisites
+## Prerequisites
 
 This script works on [Heroku](https://dashboard.heroku.com/).
 So, if you don't have Heroku Account yet, please signup [here](https://signup.heroku.com/login)
@@ -22,7 +22,7 @@ if you are not familier with twitter api, Check it out [Here](https://www.slickr
 
 
 
-# Installation & Getting started
+## Installation & Getting started
 
 
 1. First, you need to clone this repository to anywhere you want.
