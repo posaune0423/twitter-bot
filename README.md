@@ -16,6 +16,9 @@ if you haven't installed it yet, please run this command below.
 $ brew tap heroku/brew && brew install heroku
 ```
 
+In addition to above, you need to obtain user access token for using Twitter API.
+please obtain them before getting started.
+if you are not familier with twitter api, Check it out [Here](https://www.slickremix.com/docs/how-to-get-api-keys-and-tokens-for-twitter/)
 
 
 
@@ -27,7 +30,21 @@ $ brew tap heroku/brew && brew install heroku
 $ git clone https://github.com/posaune0423/twitter-bot.git
 
 $ cd twitter-bot
+
+$ vi config.php
 ```
+
+then you should see like this
+```
+<?php
+
+define('CONSUMER_KEY', 'your consumerkey');
+define('CONSUMER_SECRET', 'your consumer secret key');
+define('ACCESS_TOKEN', 'your access token');
+define('ACCESS_TOKEN_SECRET', 'your secret access token');
+```
+please replace `your ~` statement to your actual API access token respectively.
+
 
 2. Then, login to heroku, and create heroku app.
 ```
