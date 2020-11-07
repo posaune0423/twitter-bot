@@ -2,7 +2,7 @@
 
 This is simple php script which allows you to search tweets containing given keywords like "RT", "follow & retweet" so that you can get a kind of prize 💵
 
-In my repository, I use the very useful php library [abraham/twitteroauth](https://github.com/abraham/twitteroauth) developed by [him](https://github.com/abraham).
+In my repository, I use a very useful php library [abraham/twitteroauth](https://github.com/abraham/twitteroauth) developed by [abraham](https://github.com/abraham).
 
 ## Prerequisites
 
