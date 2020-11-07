@@ -91,5 +91,11 @@ $ heroku addons:open scheduler
 
 ```
 $ heroku logs
+2020-11-07T16:04:49.309888+00:00 app[api]: Starting process with command `php src/test.php` by user scheduler@addons.heroku.com
+2020-11-07T16:04:50.236685+00:00 heroku[scheduler.8715]: Starting process with command `php src/test.php`
+2020-11-07T16:04:50.824747+00:00 heroku[scheduler.8715]: State changed from starting to up
+2020-11-07T16:04:52.153919+00:00 app[scheduler.8715]: It Works !
+2020-11-07T16:04:52.156169+00:00 heroku[scheduler.8715]: Process exited with status 0
+2020-11-07T16:04:52.196298+00:00 heroku[scheduler.8715]: State changed from up to complete
 
 ```
