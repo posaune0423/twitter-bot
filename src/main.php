@@ -17,7 +17,8 @@ $connection = new TwitterOAuth(
 $tweetmanager = new TweetManager($connection);
 
 
-$keywords = ['リツイート', 'RT'];
+// only the word "RT" may not work well when a tweet someone retweeted streamed in your TL
+$keywords = ['リツイート', 'をRT', 'RTで', '&RT'];
 
 
 $current_timeline = $tweetmanager->get_timeline();
