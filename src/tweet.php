@@ -10,7 +10,14 @@ class TweetManager
 		$this->oauth_instance = $oauth_instance;
 	}
 
-	public function get_timeline($count = 3)
+	/**
+	 *
+	 * get tweet objects in your timeline by using twitter api
+	 *
+	 * @param int $count
+	 * @return stdClass
+	 */
+	public function get_timeline($count = 10)
 	{
 		return $this->oauth_instance->get(
 			"statuses/home_timeline",
@@ -20,6 +27,14 @@ class TweetManager
 		);
 	}
 
+	/**
+	 *
+	 * fetch tweets containg given keywords and return id_lists
+	 *
+	 * @param stdClass $tweets
+	 * @param array $keyword
+	 * @return array
+	 */
 	public function fetch_tweet_id_containg_keywords($tweets, $keywords)
 	{
 		$id_lists = [];
@@ -37,6 +52,13 @@ class TweetManager
 		return $id_lists;
 	}
 
+	/**
+	 *
+	 * retweet multiple tweets by given tweet_ids if the tweet has not been retweeted yet.
+	 * and return the number of retweeted tweets at the time.
+	 * @param array $tweet_ids
+	 * @return int
+	 */
 	public function retweet($tweet_ids)
 	{
 		$count = 0;
