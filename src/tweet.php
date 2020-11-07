@@ -4,6 +4,7 @@
 class TweetManager
 {
 	public $oauth_instance;
+	public $retweeted_list;
 
 	public function __construct($oauth_instance)
 	{
@@ -63,7 +64,7 @@ class TweetManager
 	{
 		$count = 0;
 		foreach ($tweet_ids as $tweet_id) {
-			if (isset($_SESSION['retweeted'][$tweet_id])) {
+			if (isset($this->retweeted_list[$tweet_id])) {
 				// if the tweet is already retweeted
 				continue;
 			}
@@ -76,8 +77,8 @@ class TweetManager
 				}
 			}
 
-			// set tweet_id to session
-			$_SESSION['retweeted'][$tweet_id] = true;
+			// set rewteeted tweet to mamber variables
+			$this->retweeted_list[$tweet_id] = true;
 			$count++;
 		}
 
