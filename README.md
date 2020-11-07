@@ -91,7 +91,7 @@ $ heroku addons:add scheduler:standard
 $ heroku addons:open scheduler
 ```
 
-8. Add the script as a job. Same as one-off step above, but without the `heroku run` - Add job... - `$ php src/test.php`
+8. Add the script as a job. Same as one-off step above, but without the `heroku run` - Add job... - `$ php src/main.php`
 
 9. View the scheduled job running in the logs
 
