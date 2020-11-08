@@ -15,7 +15,7 @@ class TweetManager
 	 * get tweet objects in your timeline by using twitter api
 	 *
 	 * @param int $count
-	 * @return stdClass
+	 * @return object
 	 */
 	public function get_timeline($count = 10)
 	{
@@ -32,7 +32,7 @@ class TweetManager
 	 * fetch tweets which has not retweeted yet containg given keywords and return id_lists
 	 *
 	 *
-	 * @param stdClass $tweets
+	 * @param array|object $tweets
 	 * @param array $keyword
 	 * @return array
 	 */
@@ -63,7 +63,7 @@ class TweetManager
 	 * tweet the given content
 	 *
 	 * @param string $content
-	 * @return
+	 * @return object
 	 */
 	public function tweet($content)
 	{
@@ -102,6 +102,13 @@ class TweetManager
 		return $count;
 	}
 
+	/**
+	*
+	* extract error message from twitter api response
+	*
+	* @param object $response_body
+	* @return string
+	*/
 	public function extract_error_message($response_body)
 	{
 		return $response_body->errors[0]->message;
