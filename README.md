@@ -1,6 +1,6 @@
 # twitterOatuhWrapper
 
-This is simple php script which allows you to search tweets containing given keywords like "RT", "follow & retweet" so that you can get a kind of prize 💵 or gift🎁
+This is simple php script which allows you to search and retweet tweets containing given keywords like "RT", "follow & retweet" so that you can get a kind of prize 💵 or gift🎁
 
 
 In my repository, I use a very useful php library [abraham/twitteroauth](https://github.com/abraham/twitteroauth) developed by [abraham](https://github.com/abraham).
@@ -64,14 +64,14 @@ $ heroku login
 $ heroku create [your app name or blank]
 ```
 
-3. Add your git local repository to heroku remote repositry.
+3. Add heroku remote repositry to your local repository.
 ```
 $ git remote add heroku https://git.heroku.com/{yourapp name}.git
 
 $ git remote -v
 ```
 
-4. then push this repository to your heroku app created right now
+4. then push this repository to your heroku remote repository created right now
 ```
 $ git push heroku master
 ```
