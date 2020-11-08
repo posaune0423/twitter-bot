@@ -2,7 +2,11 @@
 
 This is simple php script which allows you to search tweets containing given keywords like "RT", "follow & retweet" so that you can get a kind of prize 💵
 
+
 In my repository, I use a very useful php library [abraham/twitteroauth](https://github.com/abraham/twitteroauth) developed by [abraham](https://github.com/abraham).
+
+At the same time this provides TwitterOauthWrapper class so that you can use oauth library easily.
+
 
 ## Prerequisites
 
@@ -27,9 +31,9 @@ if you are not familier with twitter api, Check it out [Here](https://www.slickr
 
 1. First, you need to clone this repository to anywhere you want.
 ```
-$ git clone https://github.com/posaune0423/twitter-bot.git
+$ git clone https://github.com/posaune0423/twitterOauthWrapper.git
 
-$ cd twitter-bot
+$ cd twitterOauthWrapper
 
 $ vi config.php
 ```
