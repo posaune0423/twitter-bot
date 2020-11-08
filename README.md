@@ -101,11 +101,13 @@ $ heroku addons:open scheduler
 
 ```
 $ heroku logs
-2020-11-07T16:04:49.309888+00:00 app[api]: Starting process with command `php src/test.php` by user scheduler@addons.heroku.com
-2020-11-07T16:04:50.236685+00:00 heroku[scheduler.8715]: Starting process with command `php src/test.php`
-2020-11-07T16:04:50.824747+00:00 heroku[scheduler.8715]: State changed from starting to up
-2020-11-07T16:04:52.153919+00:00 app[scheduler.8715]: It Works !
-2020-11-07T16:04:52.156169+00:00 heroku[scheduler.8715]: Process exited with status 0
-2020-11-07T16:04:52.196298+00:00 heroku[scheduler.8715]: State changed from up to complete
+2020-11-08T04:21:29.339953+00:00 app[api]: Starting process with command `php src/main.php` by user scheduler@addons.heroku.com
+2020-11-08T04:21:30.974962+00:00 heroku[scheduler.4261]: Starting process with command `php src/main.php`
+2020-11-08T04:21:31.608102+00:00 heroku[scheduler.4261]: State changed from starting to up
+2020-11-08T04:21:33.370411+00:00 app[scheduler.4261]: PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /app/vendor/abraham/twitteroauth/src/SignatureMethod.php on line 61
+2020-11-08T04:21:33.370445+00:00 app[scheduler.4261]: PHP Deprecated:  Array and string offset access syntax with curly braces is deprecated in /app/vendor/abraham/twitteroauth/src/SignatureMethod.php on line 61
+2020-11-08T04:21:33.691640+00:00 app[scheduler.4261]: Success! 1 tweets has been retweeted
+2020-11-08T04:21:33.752897+00:00 heroku[scheduler.4261]: Process exited with status 0
+2020-11-08T04:21:33.793979+00:00 heroku[scheduler.4261]: State changed from up to complete
 
 ```
