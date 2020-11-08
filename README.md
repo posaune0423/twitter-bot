@@ -1,6 +1,6 @@
 # twitterOatuhWrapper
 
-This is simple php script which allows you to search tweets containing given keywords like "RT", "follow & retweet" so that you can get a kind of prize 💵
+This is simple php script which allows you to search tweets containing given keywords like "RT", "follow & retweet" so that you can get a kind of prize 💵 or gift🎁
 
 
 In my repository, I use a very useful php library [abraham/twitteroauth](https://github.com/abraham/twitteroauth) developed by [abraham](https://github.com/abraham).
@@ -47,7 +47,7 @@ define('CONSUMER_SECRET', 'your consumer secret key');
 define('ACCESS_TOKEN', 'your access token');
 define('ACCESS_TOKEN_SECRET', 'your secret access token');
 ```
-please replace `your ~` statement to your actual API access token respectively.
+please replace `your ~` statement with your actual API access token respectively.
 and commit changes you made now
 
 ```
