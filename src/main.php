@@ -12,8 +12,8 @@ $oauthwrapper = new TwitterOauthWrapper(
 	ACCESS_TOKEN_SECRET
 );
 
-
-// only the word "RT" may not work well when a tweet someone retweeted streamed in your TL
+// you can configure these keywords by yourself.
+// BUT only the word "RT" may not work well when a tweet someone retweeted streamed in your TL
 $keywords = ['リツイート', 'をRT', 'RTで', '&RT'];
 
 
